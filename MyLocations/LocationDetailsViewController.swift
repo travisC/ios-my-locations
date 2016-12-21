@@ -6,6 +6,7 @@
 //  Copyright © 2016 Travis Cunningham. All rights reserved.
 //
 
+import CoreData
 import UIKit
 import CoreLocation
 
@@ -29,14 +30,32 @@ class LocationDetailsViewController: UITableViewController {
     var placemark: CLPlacemark?
     
     var categoryName = "No Category"
+    var date = Date()
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     
     @IBAction func done() {
-        let hudView = HudView.hud(inView: navigationController!.view, animated: true)
+        let hudView = HudView.hud(inView: navigationController!.view,
+                                  animated: true)
         hudView.text = "Tagged"
-        
-        afterDelay(0.6) {
-            self.dismiss(animated: true, completion: nil)
+        // 1
+        let location = Location(context: managedObjectContext)
+        // 2
+        location.locationDescription = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        // 3
+        do {
+            try managedObjectContext.save()
+            afterDelay(0.6) {
+                self.dismiss(animated: true, completion: nil)
+            }
+        } catch {
+            fatalCoreDataError(error)
         }
     }
     @IBAction func cancel() {
@@ -63,7 +82,7 @@ class LocationDetailsViewController: UITableViewController {
         } else {
             addressLabel.text = "No Address Found"
         }
-        dateLabel.text = format(date: Date())
+        dateLabel.text = format(date: date)
         
         let gestureRecognizer = UITapGestureRecognizer(target: self,
                                                        action: #selector(hideKeyboard))

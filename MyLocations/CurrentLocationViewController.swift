@@ -6,6 +6,7 @@
 //  Copyright © 2016 Travis Cunningham. All rights reserved.
 //
 
+import CoreData
 import CoreLocation
 import UIKit
 
@@ -23,6 +24,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var lastGeocodingError: Error?
     
     var timer: Timer?
+    
+    var managedObjectContext: NSManagedObjectContext!
     
 
     @IBOutlet weak var messageLabel: UILabel!
@@ -281,6 +284,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
                 as! LocationDetailsViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
+            controller.managedObjectContext = managedObjectContext
         }
     }
 
