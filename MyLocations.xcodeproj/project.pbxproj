@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F460B4A1E16DE6700BA4E53 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 1F460B491E16DE6700BA4E53 /* Sound */; };
 		1F58AB511E088A6A0037EECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58AB501E088A6A0037EECF /* AppDelegate.swift */; };
 		1F58AB531E088A6A0037EECF /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58AB521E088A6A0037EECF /* CurrentLocationViewController.swift */; };
 		1F58AB581E088A6A0037EECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F58AB561E088A6A0037EECF /* Main.storyboard */; };
 		1F58AB5A1E088A6A0037EECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F58AB591E088A6A0037EECF /* Assets.xcassets */; };
-		1F58AB5D1E088A6A0037EECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F58AB5B1E088A6A0037EECF /* LaunchScreen.storyboard */; };
 		1FC387E41E0CAD1B00D69304 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC387E31E0CAD1B00D69304 /* MapKit.framework */; };
 		1FC387E61E0CAD9900D69304 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC387E51E0CAD9900D69304 /* MapViewController.swift */; };
 		1FCB91571E09A477007EEFC6 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB91561E09A477007EEFC6 /* LocationDetailsViewController.swift */; };
@@ -31,12 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F460B491E16DE6700BA4E53 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		1F58AB4D1E088A6A0037EECF /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F58AB501E088A6A0037EECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F58AB521E088A6A0037EECF /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		1F58AB571E088A6A0037EECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F58AB591E088A6A0037EECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1F58AB5C1E088A6A0037EECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F58AB5E1E088A6A0037EECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC387E31E0CAD1B00D69304 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1FC387E51E0CAD9900D69304 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +96,6 @@
 				1FD93E891E09DB24001AB5C5 /* Functions.swift */,
 				1FD93E871E09D1E3001AB5C5 /* HudView.swift */,
 				1F58AB5E1E088A6A0037EECF /* Info.plist */,
-				1F58AB5B1E088A6A0037EECF /* LaunchScreen.storyboard */,
 				1FD93E8E1E0A0195001AB5C5 /* Location+CoreDataClass.swift */,
 				1FD93E8F1E0A0195001AB5C5 /* Location+CoreDataProperties.swift */,
 				1FE187031E0B5715004A9A94 /* LocationCell.swift */,
@@ -109,6 +108,7 @@
 				1FCCEE371E15F50F00B65675 /* MyTabBarController.swift */,
 				1FCCEE391E15F5C900B65675 /* MyNavigationController.swift */,
 				1FCCEE3B1E15F63200B65675 /* MyImagePickerController.swift */,
+				1F460B491E16DE6700BA4E53 /* Sound */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F58AB5D1E088A6A0037EECF /* LaunchScreen.storyboard in Resources */,
 				1F58AB5A1E088A6A0037EECF /* Assets.xcassets in Resources */,
+				1F460B4A1E16DE6700BA4E53 /* Sound in Resources */,
 				1F58AB581E088A6A0037EECF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,14 +228,6 @@
 				1F58AB571E088A6A0037EECF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1F58AB5B1E088A6A0037EECF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F58AB5C1E088A6A0037EECF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = HLC77V4C4H;
 				INFOPLIST_FILE = MyLocations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -349,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = HLC77V4C4H;
 				INFOPLIST_FILE = MyLocations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

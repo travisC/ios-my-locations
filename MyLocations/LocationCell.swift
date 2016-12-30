@@ -13,9 +13,10 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         backgroundColor = UIColor.black
         descriptionLabel.textColor = UIColor.white
         descriptionLabel.highlightedTextColor = descriptionLabel.textColor
@@ -30,14 +31,13 @@ class LocationCell: UITableViewCell {
         photoImageView.clipsToBounds = true
         separatorInset = UIEdgeInsets(top: 0, left: 82, bottom: 0, right: 0)
         
-        //descriptionLabel.backgroundColor = UIColor.purple
-        //addressLabel.backgroundColor = UIColor.purple
-        
+        //descriptionLabel.backgroundColor = UIColor.purple()
+        //addressLabel.backgroundColor = UIColor.purple()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -47,6 +47,7 @@ class LocationCell: UITableViewCell {
         } else {
             descriptionLabel.text = location.locationDescription
         }
+        
         if let placemark = location.placemark {
             var text = ""
             text.add(text: placemark.subThoroughfare)
@@ -67,5 +68,5 @@ class LocationCell: UITableViewCell {
         }
         return UIImage(named: "No Photo")!
     }
-
 }
+
