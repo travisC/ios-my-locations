@@ -131,6 +131,7 @@ class LocationDetailsViewController: UITableViewController {
                 }
             }
         }
+
         
         descriptionTextView.text = descriptionText
         categoryLabel.text = categoryName
